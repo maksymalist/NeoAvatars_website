@@ -9,7 +9,7 @@ function Button({ text, onClick }) {
           onClick={() => {
             onClick();
           }}
-          class={styles.neons}
+          className={styles.neons}
         >
           {text}
         </button>
