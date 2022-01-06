@@ -9,7 +9,9 @@ const Nav = () => {
       <div className={styles.leftLinks}>
         <li className={styles.liMargin}>
           <Link href="/" passHref>
-            <Image width={72} height={72} src={logo} alt="logo" />
+            <a href="/" className={styles.link}>
+              <Image width={72} height={72} src={logo} alt="logo" />
+            </a>
           </Link>
         </li>
         {/* <li className={styles.liMargin}>
