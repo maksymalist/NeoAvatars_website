@@ -8,16 +8,13 @@ const Nav = () => {
     <div className={styles.nav}>
       <div className={styles.leftLinks}>
         <li className={styles.liMargin}>
-          <Link href="/">
+          <Link href="/" passHref>
             <Image width={72} height={72} src={logo} alt="logo" />
           </Link>
         </li>
-        <li className={styles.liMargin}>
-          <Link href="/about">About</Link>
-        </li>
-        <li className={styles.liMargin}>
-          <Link href="/shop">Shop</Link>
-        </li>
+        {/* <li className={styles.liMargin}>
+          <Link href="/about" passHref>About</Link>
+        </li> */}
       </div>
       <div className={styles.rightLinks}></div>
     </div>
