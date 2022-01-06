@@ -12,6 +12,25 @@
   align-items: center;
 }
 
+.home__frame_1 {
+  background-image: url("../assets/home__frame__1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: auto;
+  margin-top: "100px";
+  display: "flex";
+  align-items: "center";
+  justify-content: "center";
+  margin: 100px;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer {
   display: flex;
   flex: 1;
@@ -29,7 +48,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: #7000ff;
   text-decoration: none;
 }
 
@@ -43,6 +62,20 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  text-align: unset !important;
+}
+
+.gradient {
+  font-size: 72px;
+  background-color: #7000ff;
+  background-image: linear-gradient(
+    43deg,
+    #7000ff 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title,
@@ -56,21 +89,13 @@
   font-size: 1.5rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
 .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
+  height: auto;
 }
 
 .card {
@@ -83,13 +108,23 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  background-color: black;
+  max-width: 350px;
+  width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #7000ff;
+  border-color: #7000ff;
 }
 
 .card h2 {
@@ -113,4 +148,13 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.blob1 {
+  position: fixed !important;
+  top: 0 !important;
+  left: 100px !important;
+  width: 200px !important;
+  height: 200px !important;
+  z-index: 0 !important;
 }

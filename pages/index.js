@@ -1,6 +1,17 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Button from "../components/Button";
+import avatar1 from "../assets/21.png";
+import groupe from "../assets/groupe.png";
+import rarity from "../assets/Absurd.svg";
+import factions from "../assets/factions.svg";
+
+import Red from "../assets/Red.svg";
+import Purple from "../assets/Purple.svg";
+import Green from "../assets/Green.svg";
+
+import { Typography, Divider } from "@mui/material";
 
 export default function Home() {
   return (
@@ -12,43 +23,250 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "left",
+            justifyContent: "center",
+            flexDirection: "column",
+          }}
+        >
+          <Typography variant="h3" className={styles.title}>
+            Welcome to <span className={styles.gradient}>Neo Avatars</span>
+          </Typography>
+          <div style={{ height: "40px" }} />
+          <Button
+            text="Getting Started"
+            onClick={() => {
+              console.log("hello");
+            }}
+          />
+        </div>
+        <div className={styles.home__frame_1}>
+          <div className={styles.flexCenter}>
+            <div className={styles.grid}>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                className={styles.card}
+              >
+                <h2>Avatars 👨‍🎤 &darr;</h2>
+                <Divider
+                  style={{
+                    width: "100%",
+                    height: "2px",
+                    backgroundColor: "white",
+                    margin: "10px",
+                  }}
+                />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+                <p>
+                  This is an avatar he has specific stats EX:.(Str💪: 40 | Hp💜:
+                  210 | Agi💨: 60 | Pre🎯: 55). The better his stats are the
+                  more likely you will enjoy playing with him.
+                </p>
+                <Image draggable={false} src={avatar1} alt="avatar1" />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                className={styles.card}
+              >
+                <h2>Avatars 👨‍🎤 &darr;</h2>
+                <Divider
+                  style={{
+                    width: "100%",
+                    height: "2px",
+                    backgroundColor: "white",
+                    margin: "10px",
+                  }}
+                />
+                <p>
+                  There are over 10 000 unique Avatars that you can collect.
+                </p>
+                <Image draggable={false} src={groupe} alt="group" />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+                className={styles.card}
+              >
+                <h2>Rarity ✨ &darr;</h2>
+                <Divider
+                  style={{
+                    width: "100%",
+                    height: "2px",
+                    backgroundColor: "white",
+                    margin: "10px",
+                  }}
+                />
+                <p>
+                  There are 5 rarities common (50%), uncommon (24%), rare (15%),
+                  epic (9%) and absurd (2%). The more rare the avatar the more
+                  expensive he is but his stats will be segnificantly better.
+                </p>
+                <Image draggable={false} src={rarity} alt="absurd" />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: "650px",
+                }}
+                className={styles.card}
+              >
+                <h2>Factions 👥 &darr;</h2>
+                <Divider
+                  style={{
+                    width: "100%",
+                    height: "2px",
+                    backgroundColor: "white",
+                    margin: "10px",
+                  }}
+                />
+                <p>
+                  The 2 factions that are currently availible are Prime and
+                  Argo. Both of these factions are enemmies and are hostile to
+                  each other.
+                </p>
+                <Image draggable={false} src={factions} alt="factions" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Typography variant="h3" className={styles.title}>
+            <span className={styles.gradient}>What are Stats?</span>
+          </Typography>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            <div className={styles.card}>
+              <Typography variant="h4">Strength💪</Typography>
+              <div style={{ height: "20px" }} />
+              <Typography variant="h5">
+                The strength stat is the most important stat in the game it is
+                used to determine the damage you deal to your enemies.
+              </Typography>
+            </div>
+            <div className={styles.card}>
+              <Typography variant="h4">Health💜</Typography>
+              <div style={{ height: "20px" }} />
+              <Typography variant="h5">
+                The health stat is pretty self explanatory. It determines how
+                much health you have.
+              </Typography>
+            </div>
+            <div className={styles.card}>
+              <Typography variant="h4">Precision🎯</Typography>
+              <div style={{ height: "20px" }} />
+              <Typography variant="h5">
+                The precision stat is determines how likely your avatar is to
+                get a critical hit.
+              </Typography>
+            </div>
+          </div>
+          <div>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-around",
+                width: "70vw",
+              }}
+            >
+              <div>
+                <Image
+                  width={400}
+                  height={400}
+                  draggable={false}
+                  src={Red}
+                  alt="red"
+                />
+              </div>
+              <div>
+                <Typography style={{ maxWidth: "300px" }} variant="h4">
+                  Red items have a tendency to give you more strength💪 then
+                  others
+                </Typography>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-around",
+                width: "70vw",
+              }}
+            >
+              <div>
+                <Image
+                  width={400}
+                  height={400}
+                  draggable={false}
+                  src={Purple}
+                  alt="purple"
+                />
+              </div>
+              <div>
+                <Typography style={{ maxWidth: "300px" }} variant="h4">
+                  Purple items have a tendency to give you more precision🎯 then
+                  others
+                </Typography>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                alignItems: "center",
+                justifyContent: "space-around",
+                width: "70vw",
+              }}
+            >
+              <div>
+                <Image
+                  width={400}
+                  height={400}
+                  draggable={false}
+                  src={Green}
+                  alt="green"
+                />
+              </div>
+              <div>
+                <Typography style={{ maxWidth: "300px" }} variant="h4">
+                  Green items have a tendency to give you more health💜 then
+                  others
+                </Typography>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Typography variant="h3" className={styles.title}>
+            <span className={styles.gradient}>What's Next?</span>
+          </Typography>
+          <div style={{ height: "40px" }} />
         </div>
       </main>
 
@@ -58,12 +276,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
