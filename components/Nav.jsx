@@ -8,7 +8,7 @@ const Nav = () => {
     <div className={styles.nav}>
       <div className={styles.leftLinks}>
         <li className={styles.liMargin}>
-          <Link href="/">
+          <Link href="/" passHref>
             <Image width={72} height={72} src={logo} alt="logo" />
           </Link>
         </li>
