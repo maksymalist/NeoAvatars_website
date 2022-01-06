@@ -4,7 +4,7 @@ import styles from "../styles/Button.module.css";
 function Button({ text, onClick }) {
   return (
     <div>
-      <div class={styles.wrapper}>
+      <div className={styles.wrapper}>
         <button
           onClick={() => {
             onClick();
