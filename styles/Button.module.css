@@ -8,17 +8,16 @@
   cursor: pointer;
   font-family: sans-serif;
   text-decoration: none;
-  color: #b026ff;
-  border: #b026ff 3px solid;
+  color: #7000ff;
+  border: #7000ff 3px solid;
   background-color: transparent;
   border-radius: 0.25em;
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-  box-shadow: inset 0 0 0.5em 0 #b026ff, 0 0 0.5em 0 #b026ff;
+  box-shadow: inset 0 0 0.5em 0 #7000ff, 0 0 0.5em 0 #7000ff;
   transition: all 0.5s;
   padding: 5px;
 }
 
 .neons:hover {
-  background-color: #b026ff;
+  background-color: #7000ff;
   color: #fff;
 }

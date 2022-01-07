@@ -9,14 +9,19 @@ const Nav = () => {
       <div className={styles.leftLinks}>
         <li className={styles.liMargin}>
           <Link href="/" passHref>
-            <a className={styles.link}>
-              <Image width={72} height={72} src={logo} alt="logo" />
-            </a>
+            <a className={styles.link}>HOME</a>
           </Link>
         </li>
-        {/* <li className={styles.liMargin}>
-          <Link href="/about" passHref>About</Link>
-        </li> */}
+        <li className={styles.liMargin}>
+          <Link href="/" passHref>
+            <a className={styles.link}>ABOUT</a>
+          </Link>
+        </li>
+        <li className={styles.liMargin}>
+          <Link href="/" passHref>
+            <a className={styles.link}>CONTACT</a>
+          </Link>
+        </li>
       </div>
       <div className={styles.rightLinks}></div>
     </div>

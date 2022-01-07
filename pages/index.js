@@ -11,7 +11,7 @@ import Red from "../assets/Red.svg";
 import Purple from "../assets/Purple.svg";
 import Green from "../assets/Green.svg";
 
-import { Typography, Divider } from "@mui/material";
+import { Typography, Divider, TextField } from "@mui/material";
 
 export default function Home() {
   return (
@@ -36,7 +36,7 @@ export default function Home() {
           </Typography>
           <div style={{ height: "40px" }} />
           <Button
-            text="Getting Started"
+            text="View on Opensea"
             onClick={() => {
               console.log("hello");
             }}
@@ -54,7 +54,7 @@ export default function Home() {
                 }}
                 className={styles.card}
               >
-                <h2>Avatars 👨‍🎤 &darr;</h2>
+                <Typography variant="h4">Avatars 👨‍🎤</Typography>
                 <Divider
                   style={{
                     width: "100%",
@@ -64,11 +64,11 @@ export default function Home() {
                   }}
                 />
 
-                <p>
+                <Typography variant="h5">
                   This is an avatar he has specific stats EX:.(Str💪: 40 | Hp💜:
                   210 | Agi💨: 60 | Pre🎯: 55). The better his stats are the
                   more likely you will enjoy playing with him.
-                </p>
+                </Typography>
                 <Image draggable={false} src={avatar1} alt="avatar1" />
               </div>
               <div
@@ -80,7 +80,7 @@ export default function Home() {
                 }}
                 className={styles.card}
               >
-                <h2>Avatars 👨‍🎤 &darr;</h2>
+                <Typography variant="h4">Avatars 👨‍🎤</Typography>
                 <Divider
                   style={{
                     width: "100%",
@@ -89,9 +89,9 @@ export default function Home() {
                     margin: "10px",
                   }}
                 />
-                <p>
+                <Typography variant="h5">
                   There are over 10 000 unique Avatars that you can collect.
-                </p>
+                </Typography>
                 <Image draggable={false} src={groupe} alt="group" />
               </div>
               <div
@@ -103,7 +103,7 @@ export default function Home() {
                 }}
                 className={styles.card}
               >
-                <h2>Rarity ✨ &darr;</h2>
+                <Typography variant="h4">Rarity ✨</Typography>
                 <Divider
                   style={{
                     width: "100%",
@@ -112,11 +112,11 @@ export default function Home() {
                     margin: "10px",
                   }}
                 />
-                <p>
+                <Typography variant="h5">
                   There are 5 rarities common (50%), uncommon (24%), rare (15%),
                   epic (9%) and absurd (2%). The more rare the avatar the more
                   expensive he is but his stats will be segnificantly better.
-                </p>
+                </Typography>
                 <Image draggable={false} src={rarity} alt="absurd" />
               </div>
               <div
@@ -129,20 +129,19 @@ export default function Home() {
                 }}
                 className={styles.card}
               >
-                <h2>Factions 👥 &darr;</h2>
+                <Typography variant="h4">Factions 👥</Typography>
                 <Divider
                   style={{
                     width: "100%",
                     height: "2px",
                     backgroundColor: "white",
-                    margin: "10px",
                   }}
                 />
-                <p>
+                <Typography variant="h5">
                   The 2 factions that are currently availible are Prime and
                   Argo. Both of these factions are enemmies and are hostile to
                   each other.
-                </p>
+                </Typography>
                 <Image draggable={false} src={factions} alt="factions" />
               </div>
             </div>
@@ -152,37 +151,48 @@ export default function Home() {
           <Typography variant="h3" className={styles.title}>
             <span className={styles.gradient}>What are Stats?</span>
           </Typography>
+          <div style={{ height: "40px" }} />
           <div
             style={{
               display: "flex",
-              flexWrap: "wrap",
               justifyContent: "center",
+              width: "100vw",
             }}
           >
-            <div className={styles.card}>
-              <Typography variant="h4">Strength💪</Typography>
-              <div style={{ height: "20px" }} />
-              <Typography variant="h5">
-                The strength stat is the most important stat in the game it is
-                used to determine the damage you deal to your enemies.
-              </Typography>
+            <div style={{ alignItems: "stretch" }} className={styles.grid}>
+              <div className={styles.card}>
+                <Typography variant="h4">Strength💪</Typography>
+                <div style={{ height: "20px" }} />
+                <Typography variant="h5">
+                  The strength stat is the most important stat in the game it is
+                  used to determine the damage you deal to your enemies.
+                </Typography>
+              </div>
+              <div className={styles.card}>
+                <Typography variant="h4">Health💜</Typography>
+                <div style={{ height: "20px" }} />
+                <Typography variant="h5">
+                  The health stat is pretty self explanatory. It determines how
+                  much health you have.
+                </Typography>
+              </div>
+              <div className={styles.card}>
+                <Typography variant="h4">Precision🎯</Typography>
+                <div style={{ height: "20px" }} />
+                <Typography variant="h5">
+                  The precision stat determines how likely your avatar is to get
+                  a critical hit.
+                </Typography>
+              </div>
+              <div className={styles.card}>
+                <Typography variant="h4">Agility💨</Typography>
+                <div style={{ height: "20px" }} />
+                <Typography variant="h5">
+                  The agility stat determines how fast your avatar is attacks.
+                </Typography>
+              </div>
             </div>
-            <div className={styles.card}>
-              <Typography variant="h4">Health💜</Typography>
-              <div style={{ height: "20px" }} />
-              <Typography variant="h5">
-                The health stat is pretty self explanatory. It determines how
-                much health you have.
-              </Typography>
-            </div>
-            <div className={styles.card}>
-              <Typography variant="h4">Precision🎯</Typography>
-              <div style={{ height: "20px" }} />
-              <Typography variant="h5">
-                The precision stat is determines how likely your avatar is to
-                get a critical hit.
-              </Typography>
-            </div>
+            <div style={{ height: "40px" }} />
           </div>
           <div>
             <div
@@ -190,8 +200,8 @@ export default function Home() {
                 display: "flex",
                 flexWrap: "wrap",
                 alignItems: "center",
-                justifyContent: "space-around",
-                width: "70vw",
+                justifyContent: "center",
+                width: "100vw",
               }}
             >
               <div>
@@ -204,7 +214,10 @@ export default function Home() {
                 />
               </div>
               <div>
-                <Typography style={{ maxWidth: "300px" }} variant="h4">
+                <Typography
+                  style={{ maxWidth: "300px", marginLeft: "50px" }}
+                  variant="h4"
+                >
                   Red items have a tendency to give you more strength💪 then
                   others
                 </Typography>
@@ -215,8 +228,8 @@ export default function Home() {
                 display: "flex",
                 flexWrap: "wrap",
                 alignItems: "center",
-                justifyContent: "space-around",
-                width: "70vw",
+                justifyContent: "center",
+                width: "100vw",
               }}
             >
               <div>
@@ -229,7 +242,10 @@ export default function Home() {
                 />
               </div>
               <div>
-                <Typography style={{ maxWidth: "300px" }} variant="h4">
+                <Typography
+                  style={{ maxWidth: "300px", marginLeft: "50px" }}
+                  variant="h4"
+                >
                   Purple items have a tendency to give you more precision🎯 then
                   others
                 </Typography>
@@ -240,8 +256,8 @@ export default function Home() {
                 display: "flex",
                 flexWrap: "wrap",
                 alignItems: "center",
-                justifyContent: "space-around",
-                width: "70vw",
+                justifyContent: "center",
+                width: "100vw",
               }}
             >
               <div>
@@ -254,7 +270,10 @@ export default function Home() {
                 />
               </div>
               <div>
-                <Typography style={{ maxWidth: "300px" }} variant="h4">
+                <Typography
+                  style={{ maxWidth: "300px", marginLeft: "50px" }}
+                  variant="h4"
+                >
                   Green items have a tendency to give you more health💜 then
                   others
                 </Typography>
