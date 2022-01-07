@@ -11,7 +11,9 @@ import Red from "../assets/Red.svg";
 import Purple from "../assets/Purple.svg";
 import Green from "../assets/Green.svg";
 
-import { Typography, Divider, TextField } from "@mui/material";
+import { Typography, Divider } from "@mui/material";
+
+import RollingImages from "../components/RollingImages";
 
 export default function Home() {
   return (
@@ -26,21 +28,32 @@ export default function Home() {
         <div
           style={{
             display: "flex",
-            alignItems: "left",
-            justifyContent: "center",
-            flexDirection: "column",
+            flexWrap: "wrap",
+            width: "100vw",
+            justifyContent: "space-evenly",
+            alignItems: "center",
           }}
         >
-          <Typography variant="h3" className={styles.title}>
-            Welcome to <span className={styles.gradient}>Neo Avatars</span>
-          </Typography>
-          <div style={{ height: "40px" }} />
-          <Button
-            text="View on Opensea"
-            onClick={() => {
-              console.log("hello");
+          <RollingImages />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
             }}
-          />
+          >
+            <Typography variant="h3" className={styles.title}>
+              Welcome to <span className={styles.gradient}>Neo Avatars</span>
+            </Typography>
+            <div style={{ height: "40px" }} />
+            <Button
+              text="View on Opensea"
+              onClick={() => {
+                console.log("hello");
+              }}
+            />
+          </div>
         </div>
         <div className={styles.home__frame_1}>
           <div className={styles.flexCenter}>
